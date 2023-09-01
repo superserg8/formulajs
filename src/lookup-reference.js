@@ -193,7 +193,7 @@ export function LOOKUP(lookup_value, array, result_array) {
  * @returns
  */
 export function MATCH(lookup_value, lookup_array, match_type) {
-  if (!lookup_value || !lookup_array) {
+  if (typeof lookup_value === 'undefined' || !lookup_array) {
     return error.na
   }
 
